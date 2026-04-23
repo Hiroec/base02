@@ -443,6 +443,7 @@ print {
   opacity: 0;
   transform: translateX(100%);
   transition: 0.4s;
+  z-index: 998;
 
   &._active {
    opacity: 1;
