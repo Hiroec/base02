@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype html>
+<html lang="ja" id="gallery">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>サイト名を入れてください</title>
- <link rel="stylesheet" href="css/reset.css">
- <link rel="stylesheet" href="css/common.css">
- <link rel="stylesheet" href="css/each.css">
+ <link href="css/reset.css" rel="stylesheet">
+ <link href="css/common.css" rel="stylesheet" type="text/css">
+ <link href="css/each.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -75,154 +75,161 @@
      </li>
     </ul><!-- SNSリストここまで -->
    </nav><!-- メニューここまで -->
-  </div>
  </header>
-
 
  <!-- コンテナ左寄せ用 -->
  <div class="container">
 
   <!-- メインコンテンツ -->
-  <main class="mainwrapper">
-   <h2 class="headingL">Sample</h2>
-   <section>
-    <h3 class="headingM">文字と装飾</h3>
-    <p>&lt;p&gt;上下に余白が付きます。<br>
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-     dolore magna aliqua.</p>
-    <p><a href="#">&lt;a&gt;リンク</a></p>
-    <p>
-     <strong>&lt;strong&gt;重要</strong><br>
-     <em>&lt;em&gt;強調</em><br>
-     <span class="marker">class="marker"マーカーLorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem qui,
-      aspernatur fugit cum molestias, quis distinctio natus perspiciatis odio voluptatem quas modi ipsam, facilis
-      officia. Aliquid omnis vero magnam ipsa?</span><br>
-     <span class="label">class="label"ラベル</span>
-    </p>
+  <main class="mainwrapper" id="js-main">
 
-    <h3 class="headingM">見出し</h3>
-    <h2 class="headingL">class="headingL"見出し<span class="ja">見出し</span></h2>
-    <h3 class="headingM">class="headingM"見出し<span class="ja">見出し</span></h3>
-    <h4 class="headingS">class="headingS"見出し<span class="ja">見出し</span></h4>
-    <h5 class="headingSS">class="headingSS"見出し<span class="ja">見出し</span></h5>
+   <h2 class="headingL">Gallery</h2>
 
-   </section>
+   <div class="gallery-header">
+    <!-- galleryメニュー -->
+    <ul class="flex">
+     <li><a href="#landscape">風景</a></li>
+     <li><a href="#plants">植物</a></li>
+     <li><a href="#zakka">雑貨</a></li>
+     <li><a href="#animal">動物</a></li>
+    </ul>
+   </div>
 
-   <section>
-    <h3 class="headingM">入力フォーム、ボタン</h3>
-    <input type="text" placeholder=""><br>
-    <textarea id="message" placeholder=""></textarea><br>
-    <button class="btn">送信</button>
-   </section>
-
-   <section>
-    <h3 class="headingM">リスト</h2>
-     <p>&lt;ul class="list"&gt;</p>
-     <ul class="list">
-      <li>リスト１</li>
-      <li>リスト２</li>
-      <li>リスト３</li>
+   <!-- 一覧表示エリア -->
+   <div class="gallery-content">
+    <section id="landscape">
+     <h3 class="headingM">Landscape <small>-風景-</small></h3>
+     <ul id="list-view" class="gallerylist">
+      <li class="gallerylist__item" data-full="../../photo/la-1.jpg">
+       <img src="../../photo/la-1.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-4.jpg">
+       <img src="../../photo/la-4.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-8.jpg">
+       <img src="../../photo/la-8.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-12.jpg">
+       <img src="../../photo/la-12.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-15.jpg">
+       <img src="../../photo/la-15.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-17.jpg">
+       <img src="../../photo/la-17.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-23.jpg">
+       <img src="../../photo/la-23.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-26.jpg">
+       <img src="../../photo/la-26.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-27.jpg">
+       <img src="../../photo/la-27.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/la-29.jpg">
+       <img src="../../photo/la-29.jpg" alt="" loading="lazy">
+      </li>
      </ul>
-     <p>&lt;ol class="list-number"&gt;</p>
-     <ol class="list-number">
-      <li>リスト１</li>
-      <li>リスト２</li>
-      <li>リスト３</li>
-     </ol>
+    </section>
 
-     &lt;dl class="gridlist"&gt;
-     <dl class="gridlist">
-      <dt class="gridlist__label">&lt;dt class="gridlist__label"&gt;項目</dt>
-      <dd class="gridlist__text">&lt;dd class="gridlist__text"&gt;説明文。Lorem ipsum dolor sit amet, consectetur
-       adipisicing
-       elit, sed do eiusmod tempor incididunt ut labore et
-       dolore magna aliqua.</dd>
-      <dt class="gridlist__label">&lt;dt class="gridlist__label"&gt;項目</dt>
-      <dd class="gridlist__text">&lt;dd class="gridlist__text"&gt;説明文。Lorem ipsum dolor sit amet, consectetur
-       adipisicing
-       elit, sed do eiusmod tempor incididunt ut labore et
-       dolore magna aliqua.</dd>
-     </dl>
-   </section>
+    <section id="plants">
+     <h3 class="headingM">Plants <small>-植物-</small></h3>
+     <ul class="gallerylist">
+      <li class="gallerylist__item" data-full="../../photo/pl-1.jpg">
+       <img src="../../photo/pl-1.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/pl-5.jpg">
+       <img src="../../photo/pl-5.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/pl-7.jpg">
+       <img src="../../photo/pl-7.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/pl-8.jpg">
+       <img src="../../photo/pl-8.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/pl-9.jpg">
+       <img src="../../photo/pl-9.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/pl-12.jpg">
+       <img src="../../photo/pl-12.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/pl-14.jpg">
+       <img src="../../photo/pl-14.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/pl-20.jpg">
+       <img src="../../photo/pl-20.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/pl-21.jpg">
+       <img src="../../photo/pl-21.jpg" alt="" loading="lazy">
+      </li>
+     </ul>
+    </section>
 
-   <section>
-    <h3 class="headingM">枠囲みボックス</h3>
-    <p>&lt;div class="box"&gt;</p>
-    <div class="box">
-     <h3 class="headingSS box__title">タイトル</h3>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.</p>
+    <section id="zakka">
+     <h3 class="headingM">Zakka <small>-雑貨-</small></h3>
+     <ul class="gallerylist">
+      <li class="gallerylist__item" data-full="../../photo/za-1.jpg">
+       <img src="../../photo/za-1.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/za-2.jpg">
+       <img src="../../photo/za-2.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/za-4.jpg">
+       <img src="../../photo/za-4.jpg" alt="" loading="lazy">
+      </li>
+     </ul>
+    </section>
+
+    <section id="animal">
+     <h3 class="headingM">Animal <small>-動物-</small></h3>
+     <ul class="gallerylist">
+      <li class="gallerylist__item" data-full="../../photo/an-2.jpg">
+       <img src="../../photo/an-2.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/an-3.jpg">
+       <img src="../../photo/an-3.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/an-4.jpg">
+       <img src="../../photo/an-4.jpg" alt="" loading="lazy">
+      <li class="gallerylist__item" data-full="../../photo/an-5.jpg">
+       <img src="../../photo/an-5.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/an-6.jpg">
+       <img src="../../photo/an-6.jpg" alt="" loading="lazy">
+      </li>
+      <li class="gallerylist__item" data-full="../../photo/an-7.jpg">
+       <img src="../../photo/an-7.jpg" alt="" loading="lazy">
+      </li>
+     </ul>
+    </section>
+
+
+    <!-- 全画面表示エリア（初期状態は非表示） -->
+    <div id="detail-view" class="hidden">
+     <div class="detail-content">
+      <img id="full-image" src="" alt="">
+      <p>ここに説明文などを記載してください。画面をクリック（タップ）すると閉じます。</p>
+     </div>
     </div>
-   </section>
 
-   <section>
-    <h3 class="headingM">レイアウト</h3>
-    <h4 class="headingS">class=“flex”での横並び</h4>
-    <h5 class="headingSS">文字</h5>
-    <div class="flex">
-     <div class="flex__item">サンプルテキスト</div>
-     <div class="flex__item">サンプルテキストサンプルテキスト</div>
-     <div class="flex__item">サンプルテキスト</div>
-     <div class="flex__item">サンプルテキストサンプルテキスト</div>
-     <div class="flex__item">サンプルテキストサンプルテキスト</div>
-     <div class="flex__item">サンプルテキストサンプルテキスト</div>
-    </div>
-    <div class="spacer"></div><!-- スペースいれたいときは、class="spacer"をつけると30pxのスペースが入ります -->
-
-    <h5 class="headingSS">画像</h5>
-    <div class="flex">
-     <div class="flex__item"><img src="https://placehold.jp/200x200.png?text=sample" alt=""></div>
-     <div class="flex__item"><img src="https://placehold.jp/200x200.png?text=sample" alt=""></div>
-     <div class="flex__item"><img src="https://placehold.jp/200x200.png?text=sample" alt=""></div>
-     <div class="flex__item"><img src="https://placehold.jp/200x200.png?text=sample" alt=""></div>
-     <div class="flex__item"><img src="https://placehold.jp/200x200.png?text=sample" alt=""></div>
-     <div class="flex__item"><img src="https://placehold.jp/200x200.png?text=sample" alt=""></div>
-     <div class="flex__item"><img src="https://placehold.jp/200x200.png?text=sample" alt=""></div>
-    </div>
-    <div class="spacer"></div>
-
-    <h4 class="headingS">class=“grid”での横並び</h4>
-    <h5 class="headingSS">文字</h5>
-    <div class="grid">
-     <div class="grid__item">サンプルテキスト</div>
-     <div class="grid__item">サンプルテキストサンプルテキスト</div>
-     <div class="grid__item">サンプルテキスト</div>
-     <div class="grid__item">サンプルテキストサンプルテキスト</div>
-     <div class="grid__item">サンプルテキストサンプルテキスト</div>
-     <div class="grid__item">サンプルテキストサンプルテキスト</div>
-    </div>
-    <div class="spacer"></div>
-
-    <h5 class="headingSS">画像</h5>
-    <div class="grid">
-     <div class="grid__item"><img src="https://placehold.jp/800x600.png?text=sample" alt=""></div>
-     <div class="grid__item"><img src="https://placehold.jp/800x600.png?text=sample" alt=""></div>
-     <div class="grid__item"><img src="https://placehold.jp/800x600.png?text=sample" alt=""></div>
-     <div class="grid__item"><img src="https://placehold.jp/800x600.png?text=sample" alt=""></div>
-     <div class="grid__item"><img src="https://placehold.jp/800x600.png?text=sample" alt=""></div>
-     <div class="grid__item"><img src="https://placehold.jp/800x600.png?text=sample" alt=""></div>
-     <div class="grid__item"><img src="https://placehold.jp/800x600.png?text=sample" alt=""></div>
-    </div>
-   </section>
+   </div>
   </main><!-- メインコンテンツここまで -->
-
 
   <!-- ページUP -->
   <a href="#" class="pageup" id="js-pageup">
    <div class="arrow"></div>
-  </a>
-  <!-- ページUPここまで -->
+  </a><!-- ページUPここまで -->
 
-
-  <!-- クレジット -->
-  <footer class="footer">
+  <!-- フッター -->
+  <footer>
+   <!-- クレジット -->
    <small>© 20xx Your site name. Designed by <a href="https://hiro-design.net/utsusemi/" target="_blank">Utsusemi
      Design</a>.</small>
-  </footer> <!-- クレジットここまで -->
+   <!-- クレジットここまで -->
+  </footer>
 
- </div><!-- コンテナここまで -->
-
+ </div>
 
  <!--JavaScrip 読込-->
  <script src="js/common.js" type="text/javascript"></script>

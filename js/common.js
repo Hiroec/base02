@@ -33,3 +33,56 @@ PageUpBtn?.addEventListener('click', () => {
   behavior: 'smooth'
  });
 });
+
+
+
+// Gallery
+document.addEventListener('DOMContentLoaded', () => {
+    const detailView = document.getElementById('detail-view');
+    const fullImage = document.getElementById('full-image');
+    const listItems = document.querySelectorAll('.gallerylist__item');
+
+    // 現在のスクロール位置を保持する変数
+    let scrollPosition = 0;
+
+    const openDetail = (src) => {
+        // 現在のスクロール位置を記録
+        scrollPosition = window.pageYOffset;
+
+        fullImage.src = src;
+        detailView.classList.remove('hidden');
+
+        // 背面のリストが動かないように body を固定する
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.width = '100%';
+    };
+
+ const closeDetail = () => {
+     
+       // スムーズスクロールを一瞬だけ無効化
+        document.documentElement.style.scrollBehavior = 'auto';
+  
+        detailView.classList.add('hidden');
+        fullImage.src = '';
+
+        // body の固定を解除し、元の位置にスクロールさせる
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, scrollPosition);
+        
+       // スムーズスクロールの設定を元に戻す
+        setTimeout(() => {
+                  document.documentElement.style.scrollBehavior = '';
+              }, 0);
+          };
+
+    listItems.forEach(item => {
+        item.addEventListener('click', () => {
+            openDetail(item.getAttribute('data-full'));
+        });
+    });
+
+    detailView.addEventListener('click', closeDetail);
+});

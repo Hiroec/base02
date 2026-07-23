@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif+JP:wght@200..900&display=swap');
+
+/*  カラー設定 */
+:root {
+ --color-bg: #fafafa;
+ --color-text: #333333;
+ --color-main: #888888;
+ --color-sub: #dddddd;
+ --color-accent: #df6a78;
+ --color-black: #292929;
+ --color-white: #ffffff;
+}
+
+/*  フォント設定 */
+:root {
+ --font-base: "Noto Serif JP", YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+ --font-title: "EB Garamond", "Noto Serif JP", YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+}
